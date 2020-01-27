@@ -91,7 +91,7 @@ class Encryptor:
         dirs = []
         for dirName, subdirList, fileList in os.walk(dir_path):
             for fname in fileList:
-                if (fname != 'encrypt.py' and fname != 'data.txt.enc'):
+                if (fname != 'encrypt.py' and fname != 'data.txt.enc' and fname != fname+'_sig.f'):
                     dirs.append(dirName + "\\" + fname)
         return dirs
 
